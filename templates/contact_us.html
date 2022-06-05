@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}تماس با ما{% endblock title %}
+
+{% block content %}
+        <section>
+            <div class="gap">
+                <div class="container">
+                    <div class="sec-title text-center">
+                        <div class="sec-title-inner">
+                            <span>{% trans "سوالی دارید؟" %}</span>
+                            <br>
+                            <span>براي مشاهده زمان هاي ثبت نام و طريقه ثبت نام و شرايط لازم لطفأ به صفحه ثبت درخواست مراجعه فرماييد.</span>
+                            <br>
+                            <span> پل ارتباطي با ما فقط از طريق ايميل ذيل ميباشد</span>
+                            <h3 class="mt-5">{% trans "ارسال پیام" %}</h3>
+                            
+                            <div class="contact-info-wrap text-center remove-ext3 mt-5">
+                                <div class="row">
+
+                                    <div class="col-md-12 col-sm-12 col-lg-12">
+                                        <div class="contact-info-box">
+                                            <i class="flaticon-email"></i>
+                                            <strong>{% trans "ارسال پیام" %}</strong>
+                                            <a href="team.html#" title="">{% trans "پشتیبانی 7/24 آماده پاسخگویی" %}</a>
+                                            <br>
+                                            <a href="team.html#" title="">{{settings.email}}</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            <div/>
+                        </div>
+                    </div>
+                    <div class="gap thm-layer opc9 mt-5">
+                <div class="fixed-bg" style="background-image: url(assets/images/parallax7.jpg);"></div>
+                    <div class="container">
+                        <div class="nwsltr-wrp text-center">
+                            <div class="nwsltr-innr">
+                                <div class="nwsltr-title">
+                                    <h3>{% trans "ارسال مشخصات و مدارک" %}</h3>
+                                    <span>{% trans "نام و نام خانوادگی شماره تماس به همراه مدارک ارسال شود" %}</span>
+                                </div>
+                                <form>
+                                    
+                                    <a class="btn btn-warning" href="mailto:{{settings.email}}">{% trans "ارسال" %}</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+                </div>
+            </div>
+        </section>
+    {% endblock content %}

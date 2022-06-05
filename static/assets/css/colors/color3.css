@@ -1,0 +1,206 @@
+/*===== Primary Color =====*/
+
+/*===== Background Color =====*/
+.thm-bg,
+.thm-btn,
+.thm-layer:before,
+.team-box:before,
+.team-scl > a:hover,
+.team-scl > a:focus,
+.testi-itm > i:before,
+.scl > a:hover,
+.scl > a:focus,
+.owl-carousel .owl-dots button.owl-dot.active,
+.hstry-desc > ul li:before,
+.team-box2 .team-scl > a:hover,
+.team-box2 .team-scl > a:focus,
+.fea-info2 > h4:before,
+.fea-car > .row > div:nth-child(2) .fea-itm:before,
+.nwsltr-innr > form button:hover,
+.nwsltr-innr > form button:focus,
+.page-title-wrap > h2:before,
+.contr-inr:before,
+.contr-butn:after,
+.pst-shr-tgs .team-scl > a:hover,
+.pst-shr-tgs .team-scl > a:focus,
+.shp-lyr,
+.contact-btn:hover,
+.contact-btn:focus,
+.srch-cls-btn:hover,
+.pageloader-wrap,
+.rspn-mnu-btn:hover,
+.rspn-scil > li a:hover,
+.rspn-mnu-cls:hover,
+.rspn-scil > li a:focus,
+.plr-box:hover > i,
+.breadcrumbs > li + li::before,
+.srv-box2:hover,
+.team-box2:hover,
+.model-close:hover
+{
+	background-color: #38ab1e;
+}
+
+/*===== Text Color =====*/
+.thm-clr,
+nav div > ul li:hover > a, 
+nav div > ul li a:focus, 
+nav div > ul li:hover > a:before, 
+nav div > ul li a:focus:before,
+.sec-title-inner > h3,
+.srv-tl > h2 span,
+.serv-box > i,
+.serv-info > h4 a:hover,
+.serv-info > h4 a:focus,
+.team-info > h4,
+.evnt-info > h4 a:hover,
+.evnt-info > h4 a:focus,
+.pst-mta > li.thm-clr,
+.prayer-times > li span.thm-clr,
+.wdgt-box > ul li:hover > a,
+.wdgt-box > ul li a:focus,
+.srch-btn:hover,
+.srch-btn:focus,
+.owl-carousel .owl-nav button.owl-next:hover, 
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:focus, 
+.owl-carousel .owl-nav button.owl-prev:focus,
+.hstry-desc > span,
+.hstry-desc > strong span,
+.team-info2 > h4,
+.sec-title-inner2 > h3,
+.srv-box2 > i,
+.srv-info2 > a,
+.fea-info2 > a,
+.breadcrumbs > li a:hover,
+.breadcrumbs > li a:focus,
+.contact-info-box > a:hover,
+.contact-info-box > a:focus,
+.cont-title > span,
+.blog-info > a,
+.blog-info > h4 a:hover,
+.blog-info > h4 a:focus,
+.pst-mta2 > li a:hover,
+.pst-mta2 > li a:focus,
+.event-info > h4 a:hover,
+.event-info > h4 a:focus,
+.event-mta > li i,
+.srv-ttl > i,
+.msn-desc > h3,
+.fltr-lnks > li a:hover,
+.fltr-lnks > li a:focus,
+.fltr-lnks > li.active > a,
+.prtfl-info > a:hover,
+.prtfl-info > a:focus,
+.tag-clouds > a:hover,
+.tag-clouds > a:focus,
+.cmt-inf > a,
+.rcnt-inf > h6 a:hover,
+.rcnt-inf > h6 a:focus,
+.contact-btn i,
+.header-search > form button:hover,
+.header-search > form button:focus,
+.rsnp-mnu ul > li > a:focus,
+.rsnp-mnu ul > li:hover > a,
+.rsnp-mnu ul > li.active > a,
+.rspn-srch > button:hover,
+.rsnp-mnu ul li.menu-item-has-children.active:before,
+.rspn-cnt > span a:hover,
+.rspn-cnt > span a:focus,
+.rspn-srch > button:hover,
+.rspn-srch > button:focus,
+.evnt-info > h4 a:hover,
+.evnt-info > h4 a:focus,
+.expns-info > h4 a:hover,
+.expns-info > h4 a:focus,
+.fea-car > .row > div:nth-child(2) .fea-info2 > a:hover,
+.fea-car > .row > div:nth-child(2) .fea-info2 > a:focus
+{
+	color: #38ab1e;
+}
+
+/*===== Border Color =====*/
+.thm-brd-clr,
+.plr-box > i::after,
+.testi-itm,
+.hstry-img:before,
+.thm-layer .team-box2 > img,
+.plr-box:hover > i,
+.srv-box2:hover
+{
+	border-color: #38ab1e;
+}
+
+
+
+/*===== Secondary Color =====*/
+
+/*===== Background Color =====*/
+.secndry-bg,
+.secndry-btn,
+.team-box:after,
+.contact-info-box:hover > i,
+.pagination > li.active > a,
+.pagination > li a:hover,
+.pagination > li a:focus,
+.msn-desc > ul li:before,
+.prtfl-box:before,
+.fltr-lnks > li a:before
+{
+	background-color: #2a486c;
+}
+
+.sec-title-inner:before,
+.event-desc > h4:before,
+.msn-desc > h3:before
+{
+	background-image: -moz-linear-gradient(359deg, rgba(42,72,108,1) 0%, rgba(80,125,179,0) 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(42,72,108,1)), color-stop(100%, rgba(80,125,179,0)));
+    background-image: -webkit-linear-gradient(359deg, rgba(42,72,108,1) 0%, rgba(80,125,179,0) 100%);
+    background-image: -o-linear-gradient(359deg, rgba(42,72,108,1) 0%, rgba(80,125,179,0) 100%);
+    background-image: -ms-linear-gradient(359deg, rgba(42,72,108,1) 0%, rgba(80,125,179,0) 100%);
+    background-image: linear-gradient(91deg, rgba(42,72,108,1) 0%, rgba(80,125,179,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a486c', endColorstr='#507db3',GradientType=1 );
+}
+
+/*===== Text Color =====*/
+.secndry-clr,
+.plr-box > i,
+.pilr-info > h4,
+.sec-title-inner > span,
+.sec-title-inner > h3 span,
+.srv-tl > h2,
+.serv-info > h4,
+.team-scl > a,
+.evnt-info > h4,
+.pry-tim-hed > span,
+.testi-info > h4,
+.sec-title-inner2 > span,
+.srv-info2 > h4,
+.srv-info2 > a:hover,
+.srv-info2 > a:focus,
+.contact-info-box > i,
+.blog-info > a:hover,
+.blog-info > a:focus,
+.pagination > li a,
+.srv-ttl > h4,
+.msn-desc > ul li,
+.cmt-inf > a:hover,
+.cmt-inf > a:focus
+{
+	color: #2a486c;
+}
+
+/*===== Border Color =====*/
+.secndry-brd-clr,
+.plr-box > i,
+.team-box > img,
+.testi-itm > i img,
+.team-box2 > img,
+.contact-info-box > i,
+.pagination > li.active > a,
+.pagination > li a:hover,
+.pagination > li a:focus
+{
+	border-color: #2a486c;
+}

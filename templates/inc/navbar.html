@@ -1,0 +1,94 @@
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+<header class="style2">
+    <div class="container ">
+        <div class="logo sec-title-inner2"><h3><a href="{% url 'posts:home' %}"><img src="{% static 'assets/images/logorahnama.jpg' %}" style="width:170px"/></a></h3></div>
+        <nav class="">
+            <div>
+            <a class="thm-btn brd-rd5" href="{% url 'posts:contact-us' %}" title="">{% trans "تماس با ما" %}</a>
+                <ul>
+                    <li><a href="{% url 'posts:home' %}">{% trans "خانه" %}</a></li>
+                    <li><a href="{% url 'posts:post-list' %}">{% trans "اخبار" %}</a></li>
+                    {% for category in categories %}
+                        <li {% if category.children.all %}class="menu-item-has-children"{% endif %}><a href="{{category.get_absolute_url}}" title="">{{category.title}}</a>
+                            <ul>
+                                {% for category in category.children.all %}
+                                <li><a href="{{category.get_absolute_url}}" title="">{{category.title}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+
+                    <li><a href="{% url 'posts:about-us' %}">{% trans "درباره ما" %}</a></li>
+                    <li>
+                    {% if LANGUAGE_CODE == 'en' %}
+                        <a href="/">فارسی</a>
+                    {% endif %}
+                    {% if LANGUAGE_CODE == 'fa' %}
+                        <a href="{% url 'change_lang' %}?lang=en&next=/en">EN</a>
+                    {% endif %}
+                    </li>
+                    
+                    <li></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header><!-- Header -->
+
+<div class="rspn-hdr">
+    <div class="rspn-mdbr">
+    </div>
+    <div class="lg-mn">
+        <div class="logo sec-title-inner2"><h3><a href="{% url 'posts:home' %}"><img src="{% static 'assets/images/logorahnama.jpg' %}" style="width:100px" /></a></h3></div>
+        <div class="rspn-cnt">
+
+            {% comment %} {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                    {{ language.name_local }} ({{ language.code }})
+                </option>
+            {% endfor %} {% endcomment %}
+
+            {% if LANGUAGE_CODE == 'en' %}
+                <a href="{% url 'posts:home' %}">فارسی</a>
+            {% endif %}
+            {% if LANGUAGE_CODE == 'fa' %}
+                <a href="{% url 'change_lang' %}?lang=en&next=/en">EN</a>
+            {% endif %}
+
+        </div>
+        <span class="rspn-mnu-btn"> <i class="fa fa-list-ul"></i> </span>
+    </div>
+    <div class="rsnp-mnu">
+        <span class="rspn-mnu-cls"> <i class="fa fa-times"></i> </span>
+        <ul>
+            <li><a href="{% url 'posts:home' %}">{% trans "خانه" %}</a></li>
+            <li><a href="{% url 'posts:post-list' %}">{% trans "اخبار" %}</a></li>
+
+            {% for category in categories %}
+                <li class="menu-item-has-children"><a href="{{category.get_absolute_url}}" title="">{{category.title}}</a>
+                    <ul>
+                        {% for category in category.children.all %}
+                        <li><a href="{{category.get_absolute_url}}" title="">{{category.title}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+            <li><a href="{% url 'posts:about-us' %}">{% trans "درباره ما" %}</a></li>
+            <li><a href="{% url 'posts:contact-us' %}">{% trans "تماس با ما" %}</a></li>
+        </ul>
+    </div><!-- Responsive Menu -->
+</div><!-- Responsive Header -->
+
+
+<style>
+
+.lg-mn {background-color: white;}
+.lg-mn span {color:black;}
+
+</style>

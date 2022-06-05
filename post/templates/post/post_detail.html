@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}مقاله {{post.title}}{% endblock title %}
+
+{% block content %}
+
+        <section>
+            <div class="gap remove-bottom black-layer2 opc85">
+                {% if post.img %}
+                <div class="fixed-bg" style="background-image: url('{{post.img.url}}');"></div>
+                {% endif %}
+                <div class="container">
+                    <div class="page-title-wrap">
+                        <h2>{{post.title}}</h2>
+                    </div><!-- Page Title Wrap -->
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="gap">
+                <div class="container">
+                    <div class="blog-detail-wrp">
+                        <div class="row">
+
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <div class="blog-detail">
+                                    <div class="blog-detail-inf brd-rd5">
+                                        {% if post.img %}
+                                            <img src="{{ post.img.url }}" alt="event-img2-1.jpg">
+                                        {% endif %}
+                                        {% if post.video %}
+                                        <style>
+                                            .h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
+                                        </style>
+                                        <div class="h_iframe-aparat_embed_frame">
+                                            <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="{{ post.video }}"></iframe>
+                                        </div>
+                                        {% endif %}
+                                        <div class="blog-detail-inf-inr mt-5">
+                                            <h4>{{ post.title }}</h4>
+                                        </div>
+                                    </div>
+                                    <div class="blog-detail-desc">
+                                        <p>{{ post.desc|safe }}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><!-- Blog Detail Wrap -->
+                </div>
+            </div>
+        </section>
+
+{% endblock content %}

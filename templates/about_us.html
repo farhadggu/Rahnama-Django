@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}درباره ما{% endblock title %}
+
+{% block content %}        
+        <section>
+            <div class="gap">
+                <div class="container">
+                    <div class="sec-title style2 text-center">
+                        <div class="sec-title-inner">
+                            <h3><span class="secndry-clr">{% trans "کار هایی که ما انجام میدهیم" %}</span></h3>
+                        </div>
+                    </div>
+                    <div class="srv-wrap3">
+                        <div class="row perdir">
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <div class="remove-ext5">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-lg-6">
+                                            <div class="srv-box3">
+                                                <div class="srv-ttl">
+                                                    <i class="flaticon-heart-1"></i>
+                                                    <h4>ترویج علم و هنر</h4>
+                                                    <span>ترویج علم و هنر</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6">
+                                            <div class="srv-box3">
+                                                <div class="srv-ttl">
+                                                    <i class="flaticon-heart-1"></i>
+                                                    <h4>حمایت های مالی و مشاوره ای</h4>
+                                                    <span>حمایت های مالی و مشاوره ای</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6">
+                                            <div class="srv-box3">
+                                                <div class="srv-ttl">
+                                                    <i class="flaticon-heart-1"></i>
+                                                    <h4>ارتقا فرهنگ عمومی</h4>
+                                                    <span>ارتقا فرهنگ عمومی</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-lg-6">
+                                            <div class="srv-box3">
+                                                <div class="srv-ttl">
+                                                    <i class="flaticon-heart-1"></i>
+                                                    <h4>به ارمغان آوردن صلح</h4>
+                                                    <span>به ارمغان آوردن صلح</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="gap gray-bg2">
+                <div class="container">
+                    <div class="msn-wrap">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-lg-6">
+                                <div class="msn-thmb-wrap">
+                                    <a href="" data-fancybox="gallery" title=""><img src="{% static 'assets/images/impo.png' %}" alt="msn-img1.jpg"></a> 
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-lg-6">
+                                <div class="msn-desc">
+                                    {{settings.about_company|safe}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+{% endblock content %}
+
+  

@@ -1,0 +1,163 @@
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% load render_partial %}
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="icon" href="assets/images/favicon2.png" sizes="32x32" type="image/png">
+    <title>رهنما - {% block title %}{% endblock title %}</title>
+
+    <link rel="stylesheet" href="{% static 'assets/css/icons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/jquery.circliful.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    {% if LANGUAGE_CODE == 'en' %}
+    <link rel="stylesheet" href="{% static 'assets/css/ltr.css' %}">
+    {% elif LANGUAGE_CODE == 'fa' %}
+    <link rel="stylesheet" href="{% static 'assets/css/rtl.css' %}">
+    {% endif %}
+    <link rel="stylesheet" href="{% static 'assets/css/shabnam.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+
+    <!-- Color Scheme -->
+    <link rel="stylesheet" href="{% static 'assets/css/colors/color3.css' %}" /><!-- Color -->
+</head>
+<body>
+    <main>
+
+        <div class="pageloader-wrap">
+            <div class="loader">
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__ball"></div>
+            </div>
+        </div><!-- Pageloader Wrap -->
+
+        {% render_partial 'posts:navbar' %}
+
+        <div class="header-search">
+            <span class="srch-cls-btn brd-rd5"><i class="fa fa-times"></i></span>
+            <form>
+                <input type="text" placeholder="جستجو کنید ...">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div><!-- Header Search -->
+
+        <div class="contact-form-model-wrap text-center">
+            <span class="model-close"><i class="fa fa-times"></i></span>
+            <div class="contact-form-inner">
+                <div class="sec-title text-center">
+                    <div class="sec-title-inner">
+                        <span>سوالی دارید؟</span>
+                        <h3>ارسال پیام</h3>
+                    </div>
+                </div>
+                <div class="contact-form text-center">
+                    <form>
+                        <div class="row mrg20">
+                            <div class="col-md-6 col-sm-6 col-lg-6">
+                                <input type="text" placeholder="نام">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-lg-6">
+                                <input type="email" placeholder="ایمیل">
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <textarea placeholder="پیام شما"></textarea>
+                                <button class="thm-btn brd-rd40" type="submit">ارسال پیام</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!-- Contact Form Model Wrap -->
+
+		{% block content %}{% endblock content %}
+
+       <footer>
+            <div class="gap top-spac70 drk-bg2 remove-bottom">
+                <div class="container">
+                    <div class="footer-data">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-12 col-lg-4">
+                                <div class="wdgt-box style2">
+                                    <div class="logo"><a href="index-2.html" title="Logo"><img src="assets/images/logo2.png" alt="logo2.png"></a></div>
+                                    <p>مرکز اسلامی <b>جامعه</b> در سال 1373 با هدف خدمت به جامعه اسلامی تشکیل شده است.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-sm-12 col-lg-8">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-lg-4">
+                                        <div class="wdgt-box">
+                                            <h4>لینک های مفید</h4>
+                                            <ul>
+                                                <li><a href="index-2.html#" title="">بلاگ</a></li>
+                                                <li><a href="index-2.html#" title="">خدمات</a></li>
+                                                <li><a href="index-2.html#" title="">کمک مالی</a></li>
+                                                <li><a href="index-2.html#" title="">تیم</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-lg-4">
+                                        <div class="wdgt-box">
+                                            <h4>صفحات سایت</h4>
+                                            <ul>
+                                                <li><a href="index-2.html#" title="">صفحه اصلی</a></li>
+                                                <li><a href="index-2.html#" title="">مطالب سایت</a></li>
+                                                <li><a href="index-2.html#" title="">تالار گفتمان</a></li>
+                                                <li><a href="index-2.html#" title="">درباره ما</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-lg-4">
+                                        <div class="wdgt-box">
+                                            <h4>تماس با ما</h4>
+                                            <ul class="cont-lst">
+                                                <li><i class="flaticon-location-pin"></i>خیابان مرکزی - بخش اصلی - ساختمان مرکزی - مرکز اسلامی جامعه</li>
+                                                <li><i class="flaticon-call"></i>123-456-789</li>
+                                                <li><i class="flaticon-email"></i><a href="index-2.html#" title="">info@mail.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Footer Data -->
+                    <div class="bottom-bar">
+                        <p>1398 | تمامی حقوق برای جامعه مفحوظ میباشد</p>
+                        <div class="scl">
+                            <a href="index-2.html#" title="توییتر" target="_blank"><i class="fa fa-twitter"></i></a>
+                            <a href="index-2.html#" title="اینستاگرام" target="_blank"><i class="fa fa-instagram"></i></a>
+                            <a href="index-2.html#" title="گوگل پلاس" target="_blank"><i class="fa fa-google-plus"></i></a>
+                            <a href="index-2.html#" title="فیسبوک" target="_blank"><i class="fa fa-facebook"></i></a>
+                        </div>
+                    </div><!-- Bottom Bar -->
+                </div>
+            </div>
+        </footer>
+
+    </main><!-- Main Wrapper -->
+
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/downCount.js' %}"></script>
+    <script src="{% static 'assets/js/fancybox.min.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/perfectscrollbar.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.circliful.min.js' %}"></script>
+    <script src="{% static 'assets/js/custom-scripts.js' %}"></script>
+</body>	
+
+</html>

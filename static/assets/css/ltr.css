@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body, 
+a,
+p,
+li,
+h4,
+h3,
+h2,
+h1,
+span,
+.hstry-desc p
+{
+  font-family: 'Poppins', sans-serif !important;
+}
+
+
+*,
+.owl-carousel .thm-btn, 
+.owl-carousel .secndry-btn {direction: ltr;}
+
+.owl-carousel,
+.owl-carousel *,
+.fea-car,
+.fea-car *,
+.srv-wrap3,
+.srv-wrap3 * {direction: ltr;}
+
+header.style2 .logo,
+nav > div ul,
+nav > div ul li,
+.bottom-bar > p,
+header.style1 .logo,
+.abot-sec > p,
+.serv-box > i,
+.suprt-sec > p,
+.suprt-prgrs .suprt-prg,
+.page-title-wrap > h2,
+.pst-mta2 > li,
+.pagination > li,
+.sidebar-wrp .wdgt-box > ul li a,
+.rcnt-bx > a,
+.cmt-bx > img,
+.event-mta > li i,
+.dnt-mta > li i,
+.breadcrumbs > li {float: left;}
+
+.float-left {float: left !important;}
+
+.logo + nav,
+nav > div > a,
+.bottom-bar > p + .scl,
+.page-title-wrap > h2 + .breadcrumbs {float: right;}
+
+.float-right {float: right !important;}
+
+nav > div > ul,
+.hstry-desc,
+.sec-title,
+.prayer-times > li span,
+.evnt-info,
+.nwsltr-innr > form input,
+.wdgt-box,
+.abot-sec,
+.serv-box,
+.srv-tl,
+.suprt-sec,
+.blog-box,
+.blog-detail,
+.event-box2,
+.bord-box,
+.srv-box3,
+.msn-wrap {text-align: left;}
+
+.prayer-times > li span:last-child,
+.sidebar-wrp .wdgt-box > ul.cat-lst li {text-align: right;}
+
+.hstry-desc > ul li::before,
+.sec-title-inner::before, 
+.event-desc > h4::before, 
+.msn-desc > h3::before,
+.wdgt-box > h4::before,
+.cont-lst > li i,
+.breadcrumbs > li + li::before,
+.srv-ttl > i,
+.msn-desc > ul li::before {
+  right: auto;
+  left: 0;
+}
+
+.text-center .sec-title-inner::before {right: auto;}
+.model-close {
+  left: auto;
+  right: 30px;
+}
+
+nav > div > ul > li.menu-item-has-children > a::before,
+.nwsltr-innr > form button,
+.srch-frm > button,
+.newsletter-inner > form button {
+  left: auto;
+  right: 0;
+}
+
+nav > div ul ul {
+    left: 100%;
+    right: auto;
+  }
+
+  nav > div ul li.menu-item-has-children:hover > ul {left: 0;}
+  nav > div ul ul li.menu-item-has-children::before {
+    left: auto;
+    right: 15px;
+    content: "\f104";
+  }
+
+  nav > div ul ul li.menu-item-has-children:hover > ul {
+    left: 100%;
+    right: auto;
+  }
+
+  .pst-mta,
+  .wdgt-box > ul,
+  .prayer-times,
+  .hstry-desc > ul,
+  .breadcrumbs,
+  nav > div ul,
+  .pst-mta2,
+  .cmt-thrd,
+  .event-mta,
+  .fnds-dnts-innr > ul,
+  .msn-desc > ul,
+  .fltr-lnks {padding-left: 0;}
+  .cmt-thrd .children {padding: 0 0 0 50px;}
+  .srv-ttl {padding: 0 0 0 70px;}
+
+.thm-btn i, 
+.secndry-btn i,
+.srv-info2 > a i,
+.scl > a + a {margin: 0 0 0 5px;}
+.rcnt-inf > span i {margin: 0 5px 0 0;}
+.pst-mta > li i,
+.dnt-mta > li i {margin: 0 8px 0 0;}
+nav > div > a + ul {margin: 0 200px 0 0;}
+nav > div > ul > li + li {margin: 0 0 0 30px;}
+.pst-mta > li + li,
+.pst-mta2 > li + li {margin: 0 0 0 20px;}
+.cmt-bx > img {margin: 0 20px 0 0;}
+.tag-clouds > span, 
+.team-scl > span {margin: 0 15px 0 0;}
+.dnt-mta > li + li {margin: 0 0 0 15px;}
+.event-mta > li i {margin: 0 10px 0 0;}
+.suprt-prgrs {margin: 0 0 0 -35px;}
+nav > div > ul > li.menu-item-has-children {padding: 0 15px 0 0;}
+.cont-lst > li {padding: 0 0 0 23px;}
+.hstry-desc > ul li {padding: 0 15px 0 20px;}
+.rcnt-bx > a + .rcnt-inf,
+.breadcrumbs > li + li {padding: 0 0 0 20px;}
+.serv-box > i + .serv-info {padding: 0 0 0 15px;}
+.msn-desc > ul li {padding: 0 0 0 30px;}
+
+.sec-title-inner::before, 
+.event-desc > h4::before, 
+.msn-desc > h3::before,
+.wdgt-box > h4::before,
+.msn-desc > ul li::before {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.testi-info > p i:first-child {left: -25px;}
+.contact-btn {
+  left: 22px;
+  right: auto;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  -webkit-transform-origin: center left;
+  -ms-transform-origin: center left;
+  -o-transform-origin: center left;
+  transform-origin: center left;
+  top: 200px;
+}
+.lft-shp {
+  left: auto;
+  -webkit-transform: translateY(-50%) rotateY(180deg);
+  -ms-transform: translateY(-50%) rotateY(180deg);
+  -o-transform: translateY(-50%) rotateY(180deg);
+  transform: translateY(-50%) rotateY(180deg);
+  right: -700px;
+}
+.white-grad-layer::before {
+  background-image: -moz-linear-gradient(right, rgba(255,255,255,.8) 0%, rgba(255,255,255,.95) 25%, rgba(255,255,255,0.9) 35%, rgba(255,255,255,0) 100%);
+  background-image: -webkit-linear-gradient(right, rgba(255,255,255,.8) 0%,rgba(255,255,255,.95) 25%,rgba(255,255,255,0.9) 35%,rgba(255,255,255,0) 100%);
+  background-image: linear-gradient(to left, rgba(255,255,255,.8) 0%,rgba(255,255,255,.95) 25%,rgba(255,255,255,0.9) 35%,rgba(255,255,255,0) 100%);
+}
+.newsletter-inner > form input {
+  -webkit-border-radius: 40px 0 0 40px;
+  border-radius: 40px 0 0 40px;
+}
+.contr-butn::after {
+  right: -60%;
+  left: auto;
+  bottom: 0;
+  top: auto;
+}
+.breadcrumbs > li + li {
+  margin-left: 15px;
+  margin-right: 0;
+}
+.breadcrumbs > li + li::before {top: 6px;}
+.fltr-lnks > li a::before {
+  left: 0;
+  right: 80%;
+}
+.fltr-lnks > li.active a::before, 
+.fltr-lnks > li a:hover::before, 
+.fltr-lnks > li a:focus::before {
+  right: 0;
+  left: 0;
+}
+.featured-cap h3{
+	font-family: 'Poppins', sans-serif;
+	font-weight:normal;
+}
+.digahz{
+	direction:ltr;
+	text-align:center;
+}
+.pref{
+	text-align:left !important;
+}
+.mtasper{
+	color:#fff;
+}
+.perdir{
+	direction:ltr !important;
+}
+.perdir p{
+	direction:ltr !important;
+}
+
+.lg-mn {
+  background-color: white;
+}

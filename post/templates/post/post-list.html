@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}همه مقالات{% endblock title %}
+
+{% block content %}
+
+    <section>
+        <div class="gap remove-bottom black-layer2 opc85">
+            <div class="fixed-bg" style="background-image: url({% static "assets/images/hgd.jpg" %});"></div>
+            <div class="container">
+                <div class="page-title-wrap">
+                    <h2>{% trans "اخبار" %}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="gap">
+            <div class="container">
+                <div class="event-wrap">
+                    <div class="row">
+                        
+                        <div class="col-md-12 col-sm-12 col-lg-12">
+                            <div class="remove-ext3">
+                                <div class="row">
+                                    {% for post in posts %}
+                                        <div class="col-md-4 col-sm-6 col-lg-4">
+                                            <div class="event-box2">
+                                                <div class="event-thumb">
+                                                    <a href="{{post.get_absolute_url}}" title="">
+                                                        {% if post.img %}
+                                                                <img src="{{ post.img.url }}" alt="event-img2-1.jpg" style="height:200px">
+                                                        {% endif %}
+                                                        {% if post.video %}
+                                                        <style>
+                                                                .h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
+                                                        </style>
+                                                        <div class="h_iframe-aparat_embed_frame">
+                                                            <span style="display: block;padding-top: 57%"></span>
+                                                            <iframe src="{{ post.video }}"></iframe>
+                                                        </div>
+                                                        {% endif %}
+                                                    </a>
+                                                </div>
+                                                <div class="event-info">
+                                                    <h4><a href="{{post.get_absolute_url}}" title="">{{ post.title|truncatewords:7 }}</a></h4>
+                                                    <p>{{ post.desc|truncatewords:30|safe }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Event Wrap -->
+            </div>
+        </div>
+    </section>
+
+    <div class="row">
+        <div class="col-12">
+            <ul class="pagination mt-3 justify-content-center pagination_style1">
+                {% if posts.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page={{posts.previous_page_number}}">قبلی</a></li>
+                {% endif %}
+                {% if posts.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page={{posts.previous_page_number}}">{{ posts.previous_page_number }}</a></li>
+                {% endif %}
+                <li class="page-item"><a class="page-link {% if page_num == page_num %}active {% endif %}" href="?page={{ posts.number }}">{{posts.number}}</a></li>
+                {% if posts.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ posts.next_page_number }}">{{ posts.next_page_number }}</a></li>
+                {% endif %}
+                {% if posts.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ posts.next_page_number }}">بعدی</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% block title %}صفحه اصلی{% endblock title %}
+
+{% block content %}
+
+<section class ="owl-curve-green">
+    <div class="gap no-gap">
+        <div class="featured-area-wrap text-center">
+            <div class="featured-area2 owl-carousel">
+
+            {% for post in posts %}
+                <div class="featured-item style2" style="background-image: url('{{post.img.url}}');">
+                    <div class="featured-cap">
+                        <h3>{{post.title}}</h3>
+                        <a class="thm-btn brd-rd5 mt-3" href="{{post.get_absolute_url}}">{% translate 'بیشتر بخوانید' %}
+                            {% if LANGUAGE_CODE == 'en' %}
+                            <i class="flaticon-right-arrow"></i>
+                            {% endif %}
+                            {% if LANGUAGE_CODE == 'fa' %}
+                            <i class="flaticon-left-arrow"></i>
+                            {% endif %}
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+
+            </div>
+        </div><!-- Featured Area Wrap -->
+    </div>
+</section>
+
+<section>
+    <div class="gap">
+        <div class="container">
+            <div class="hstry-wrap">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-lg-6">
+                            <img src="{% static 'assets/images/impo.png' %}" alt="hstry-img.png">
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-lg-6">
+                        <div class="hstry-desc">
+                            {{settings.about_company|safe}}
+                        </div>
+                    </div>
+                </div>
+            </div><!-- History Wrap -->
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="gap">
+        <div class="container">
+            <div class="sec-title2 text-center">
+                <div class="sec-title-inner2">
+                    <span>{% trans "خدمات ما" %}</span>
+                    <h3 class='mb-5'>{% trans "خدمات ما" %}</h3>
+                </div>
+            </div>
+            <div class="event-wrap">
+                <div class="row">
+
+                    <div class="col-md-12 col-sm-12 col-lg-12">
+                        <div class="remove-ext3">
+                            <div class="row">
+                                {% for post in post_services %}
+                                        <div class="col-md-5 col-sm-4 col-lg-5 offset-md-1">
+                                            <div class="event-box2">
+                                                <div class="event-thumb">
+                                                    <a href="{{post.get_absolute_url}}" title="">
+                                                        {% if post.img %}
+                                                            <img src="{{ post.img.url }}" alt="event-img2-1.jpg" style="height:200px">
+                                                        {% endif %}
+                                                    </a>
+                                                </div>
+                                                <div class="event-info">
+                                                    <h4><a href="{{post.get_absolute_url}}" title="">{{ post.title|truncatewords:7 }}</a></h4>
+                                                    <p>{{ post.desc|truncatewords:30|safe }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                {% endfor %}
+                            </div>
+                            <div class="view-all text-center">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Event Wrap -->
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="gap">
+        <div class="container">
+            <div class="event-wrap">
+                <div class="row">
+
+                <div class="sec-title2 text-center">
+                    <div class="sec-title-inner2">
+                        <span>{% trans "اخبار و اطلاع رسانی ها" %}</span>
+                        <h3 class='mb-5'>{% trans "اخبار" %}</h3>
+                    </div>
+                </div>
+
+                    <div class="col-md-12 col-sm-12 col-lg-12">
+                        <div class="remove-ext3">
+                            <div class="row">
+                                {% for post in posts %}
+                                        <div class="col-md-4 col-sm-4 col-lg-4">
+                                            <div class="event-box2">
+                                                <div class="event-thumb">
+                                                    <a href="{{post.get_absolute_url}}" title="">
+                                                        {% if post.img %}
+                                                            <img src="{{ post.img.url }}" alt="event-img2-1.jpg" style="height:200px">
+                                                        {% endif %}
+                                                        {% if post.video %}
+                                                        <style>
+                                                            .h_iframe-aparat_embed_frame{position:relative;}.h_iframe-aparat_embed_frame .ratio{display:block;width:100%;height:auto;}.h_iframe-aparat_embed_frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;}
+                                                        </style>
+                                                        <div class="h_iframe-aparat_embed_frame">
+                                                            <span style="display: block;padding-top: 57%"></span>
+                                                            <iframe src="{{ post.video }}"></iframe>
+                                                        </div>
+                                                        {% endif %}
+                                                    </a>
+                                                </div>
+                                                <div class="event-info">
+                                                    <h4><a href="{{post.get_absolute_url}}" title="">{{ post.title|truncatewords:7 }}</a></h4>
+                                                    <p>{{ post.desc|truncatewords:10|safe }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Event Wrap -->
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="gap">
+        <div class="container">
+            <div class="sec-title2 text-center">
+                <div class="sec-title-inner2">
+                    <span>{% trans "خدمات بشر دوستانه" %}</span>
+                    <h3>{% trans "خدمات ما" %}</h3>
+                </div>
+            </div>
+            <div class="serv-wrap text-center remove-ext3">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-lg-3">
+                        <div class="srv-box2">
+                            <i class="flaticon-social-care"></i>
+                            <div class="srv-info2">
+                                <h4>ترویج علم و هنر</h4>
+                                <p>بنیاد ره نما یک سازمان انتفاعی (non-profit) میباشد که در راستای ترویج علم و هنر در میان جوانان خاورمیانه قدم برمیدارد.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-lg-3">
+                        <div class="srv-box2">
+                            <i class="flaticon-heart-1"></i>
+                            <div class="srv-info2">
+                                <h4>حمایت های مالی و مشاوره ای</h4>
+                                <p>این سازمان ارائه دهنده حمایت های مالی و مشاوره ای میباشد که تمامی اعضای آن به صورت داوطلبانه مشارکت دارند</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-lg-3">
+                        <div class="srv-box2">
+                            <i class="flaticon-social-care"></i>
+                            <div class="srv-info2">
+                                <h4>{% trans "ارتقا فرهنگ عمومی" %}</h4>
+                                <p>دانشجویان ما از با انگیزه ترین استعداد های درخشان هستند که در آینده با فعالیت های خود چراغی در مسیر پیشرفت بشریت روشن خواهد کرد.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-lg-3">
+                        <div class="srv-box2">
+                            <i class="flaticon-heart-1"></i>
+                            <div class="srv-info2">
+                                <h4>به ارمغان آوردن صلح</h4>
+                                <p>هدف ما ارتقا فرهنگ عمومی و به ارمغان آوردن صلح و روا داری و همنوع دوستی و کمک به یکدیگر در جامعه بشری میباشد</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Serv Wrap -->
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
